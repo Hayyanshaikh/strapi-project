@@ -11,18 +11,26 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Active": {
+    "active": {
       "type": "boolean",
       "default": true,
       "required": true
     },
-    "Stock": {
+    "stock": {
       "type": "integer"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
